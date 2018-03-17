@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyCafe.Db.Context\MyCafe.Db.Context.csproj" />
+    <ProjectReference Include="..\MyCafe.DB.Enities\MyCafe.DB.Enities.csproj" />
+    <ProjectReference Include="..\MyCafe.Db.Repository.Interfaces\MyCafe.Db.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
