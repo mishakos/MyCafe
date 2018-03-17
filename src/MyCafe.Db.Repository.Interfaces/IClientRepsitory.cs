@@ -9,8 +9,8 @@ namespace MyCafe.Db.Repository.Interfaces
     {
         Task<Client> GetClientById(int id);
         Task<IEnumerable<Client>> GetClients();
-        Task AddClient(Client client);
-        Task UpdateClient(Client client);
-        Task DeleteClient(Client client);
+        Task<int> AddClient(Client client);
+        Task<int> UpdateClient(Client client);
+        Task<int> DeleteClient(Client client);
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace MyCafe.BLL.DTO
+﻿namespace MyCafe.Web.ViewModels
 {
-    public class ClientDTO
+    public class ClientViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

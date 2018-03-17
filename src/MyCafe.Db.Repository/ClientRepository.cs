@@ -19,18 +19,18 @@ namespace MyCafe.Db.Repository
             _context = context;
         }
 
-        public async Task AddClient(Client client)
+        public async Task<int> AddClient(Client client)
         {
             _context.Add(client);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteClient(Client client)
+        public async Task<int> DeleteClient(Client client)
         {
             var oldItem = _context.Clients.FindAsync(client.Id);
             if (oldItem == null) throw new ArgumentException($"Client {client.Id} not found.");
             _context.Remove(client);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         public async Task<Client> GetClientById(int id)
@@ -43,10 +43,10 @@ namespace MyCafe.Db.Repository
             return await _context.Clients.ToListAsync();
         }
 
-        public async Task UpdateClient(Client client)
+        public async Task<int> UpdateClient(Client client)
         {
             _context.Update(client);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
     }
 }

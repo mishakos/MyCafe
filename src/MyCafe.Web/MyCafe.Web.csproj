@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyCafe.BLL.DI\MyCafe.BLL.DI.csproj" />
+    <ProjectReference Include="..\MyCafe.BLL.Services.Interfaces\MyCafe.BLL.Services.Interfaces.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
