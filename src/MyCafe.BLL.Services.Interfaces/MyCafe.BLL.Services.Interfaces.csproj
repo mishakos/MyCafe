@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyCafe.BLL.DTO\MyCafe.BLL.DTO.csproj" />
+    <ProjectReference Include="..\MyCafe.DB.Enities\MyCafe.DB.Enities.csproj" />
   </ItemGroup>
 
 </Project>

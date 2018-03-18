@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyCafe.BLL.Services.Interfaces\MyCafe.BLL.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\MyCafe.BLL.Services\MyCafe.BLL.Services.csproj" />
     <ProjectReference Include="..\MyCafe.Db.DI\MyCafe.Db.DI.csproj" />
   </ItemGroup>
 

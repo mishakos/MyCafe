@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyCafe.BLL.Services;
+using MyCafe.BLL.Services.Interfaces;
 using MyCafe.Db.DI;
 using System;
 
@@ -12,6 +14,9 @@ namespace MyCafe.BLL.DI
             services.AddMyCafeDb(configuration);
             services.AddRepository();
 
+            services.AddScoped<IClientService, ClientService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IFirmService, FirmService>();
             return services;
         }
     }

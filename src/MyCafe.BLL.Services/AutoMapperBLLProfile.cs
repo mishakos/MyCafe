@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+
 using MyCafe.BLL.DTO;
 using MyCafe.DB.Enities;
 
@@ -8,7 +9,9 @@ namespace MyCafe.BLL.Services
     {
         public AutoMapperBLLProfile()
         {
-            CreateMap<Client, ClientDTO>();
+            CreateMap<Client, ClientDTO>().ReverseMap();
+            CreateMap<Department, DepartmentDTO>().ReverseMap();
+            CreateMap<Firm, FirmDTO>().ReverseMap();
         }
     }
 }

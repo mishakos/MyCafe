@@ -22,6 +22,9 @@ namespace MyCafe.Db.DI
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IFirmRepository, FirmRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;
         }
