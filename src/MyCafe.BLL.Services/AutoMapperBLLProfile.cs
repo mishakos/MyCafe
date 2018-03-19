@@ -12,6 +12,7 @@ namespace MyCafe.BLL.Services
             CreateMap<Client, ClientDTO>().ReverseMap();
             CreateMap<Department, DepartmentDTO>().ReverseMap();
             CreateMap<Firm, FirmDTO>().ReverseMap();
+            CreateMap<Product, ProductDTO>().ReverseMap();
         }
     }
 }

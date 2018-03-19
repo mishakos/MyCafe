@@ -17,6 +17,7 @@ namespace MyCafe.BLL.DI
             services.AddScoped<IClientService, ClientService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IFirmService, FirmService>();
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
     }

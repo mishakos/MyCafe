@@ -109,13 +109,17 @@ namespace MyCafe.Web.Controllers
         {
             try
             {
-
+                var oldItem = await _service.GetById(id);
+                if (oldItem == null)
+                    return NotFound(new OperationResult($"Department {id} not found."));
+                await _service.Delete(oldItem);
+                return Ok(new OperationResult(true));
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Exception thrown in delete department:{ex}");
             }
-            return BadRequest(new ObjectResult("Delete deparment error."));
+            return BadRequest(new OperationResult("Delete deparment error."));
         }
     }
 }

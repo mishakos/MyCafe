@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -20,7 +21,7 @@ namespace MyCafe.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddBLLServises(Configuration);
-
+            services.AddAutoMapper();
             services.AddMvc();
         }
 

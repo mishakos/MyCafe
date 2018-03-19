@@ -1,9 +1,8 @@
-﻿namespace MyCafe.Web.ViewModels
+﻿namespace MyCafe.BLL.DTO
 {
-    public class ProductViewModel
+    public class PriceTypeDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
     }
 }
