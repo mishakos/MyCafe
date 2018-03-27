@@ -1,4 +1,6 @@
-﻿namespace MyCafe.DB.Enities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MyCafe.DB.Enities
 {
     public class ProductUnit
     {
@@ -9,7 +11,8 @@
         public Product Product { get; set; }
         public decimal Koef { get; set; }
         public decimal Weight { get; set; }
-        public int WightUnitId { get; set; }
+        public int WeightUnitId { get; set; }
+        [ForeignKey("WeightUnitId")]
         public Unit WeightUnit { get; set; }
     }
 }

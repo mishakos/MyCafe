@@ -9,7 +9,7 @@
         public ProductDTO Product { get; set; }
         public decimal Koef { get; set; }
         public decimal Weight { get; set; }
-        public int WightUnitId { get; set; }
+        public int WeightUnitId { get; set; }
         public UnitDTO WeightUnit { get; set; }
     }
 }

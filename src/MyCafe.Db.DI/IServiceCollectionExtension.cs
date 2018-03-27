@@ -14,7 +14,7 @@ namespace MyCafe.Db.DI
         {
             services.AddDbContext<MyCafeContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("MyCafe"));
+                options.UseSqlServer(configuration.GetConnectionString("MyCafe"), b => b.MigrationsAssembly("MyCafe.Web"));
             });
             return services;
         }
