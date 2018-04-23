@@ -48,7 +48,14 @@ module.exports = (env) => {
             })
         ] : [
             // Plugins that apply in production builds only
-            new webpack.optimize.UglifyJsPlugin()
+                new webpack.optimize.UglifyJsPlugin({
+                    compress: {
+                        // suppresses warnings, usually from module minification
+                        warnings: false,
+                    },
+                }),
+                // Allows error warnings but does not stop compiling.
+                new webpack.NoErrorsPlugin()
         ])
     });
 
