@@ -25,7 +25,10 @@ namespace MyCafe.Db.DI
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IFirmRepository, FirmRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-
+            services.AddScoped<IProductUnitRepository, ProductUnitRepository>();
+            services.AddScoped<IInvoiceRepository, InvoiceRepository>();
+            services.AddScoped<IInvoiceDetailRepository, IInvoiceDetailRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             return services;
         }
     }
